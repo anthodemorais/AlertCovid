@@ -12,6 +12,7 @@ class ViewController: UIViewController {
     
     var initialLocation = CLLocation(latitude: 48.856614, longitude: 2.3522219)
     var mapView: MKMapView?
+    var bottomView: UIView?
     let locationManager = CLLocationManager()
     
     var resultSearchController: UISearchController?
@@ -19,20 +20,10 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.view.backgroundColor = .white
-        let topView = UIView(frame: CGRect(x: 0, y: 0, width: self.view.frame.width, height: 50))
-        
-        self.view.addSubview(topView)
-        topView.translatesAutoresizingMaskIntoConstraints = false
-        NSLayoutConstraint.activate([
-            topView.topAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.topAnchor),
-            topView.leadingAnchor.constraint(equalTo: self.view.leadingAnchor),
-            topView.trailingAnchor.constraint(equalTo: self.view.trailingAnchor),
-            topView.heightAnchor.constraint(equalToConstant: topView.frame.height)
-        ])
+        self.view.backgroundColor = UIColor(white: 1, alpha: 0)
         
         self.mapView = MKMapView(frame: CGRect(x: 0,
-                                               y: topView.frame.height + topView.frame.maxY,
+                                               y: 0,
                                                width: self.view.frame.width,
                                                height: self.view.frame.height))
         self.mapView?.centerToLocation(self.initialLocation)
@@ -44,6 +35,18 @@ class ViewController: UIViewController {
             self.view.addSubview(map)
         }
         
+        let topView = UIView(frame: CGRect(x: 5, y: 0, width: self.view.frame.width, height: 36))
+        topView.backgroundColor = .white
+        topView.layer.cornerRadius = 10
+        
+        self.view.addSubview(topView)
+        topView.translatesAutoresizingMaskIntoConstraints = false
+        NSLayoutConstraint.activate([
+            topView.topAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.topAnchor, constant: -2),
+            topView.leadingAnchor.constraint(equalTo: self.view.leadingAnchor, constant: 13),
+            topView.trailingAnchor.constraint(equalTo: self.view.trailingAnchor, constant: -13),
+            topView.heightAnchor.constraint(equalToConstant: topView.frame.height)
+        ])
         
         let locationSearchController = LocationSearchController()
         resultSearchController = UISearchController(searchResultsController: locationSearchController)
@@ -52,21 +55,25 @@ class ViewController: UIViewController {
         let searchBar = resultSearchController!.searchBar
         searchBar.searchBarStyle = .minimal
         searchBar.sizeToFit()
-        topView.addSubview(searchBar)
+        searchBar.frame = CGRect(x: 5, y: topView.frame.origin.y + topView.frame.height, width: self.view.frame.width - 10, height: searchBar.frame.height)
+        self.view.addSubview(searchBar)
         
         resultSearchController?.hidesNavigationBarDuringPresentation = false
         definesPresentationContext = true
         
         locationSearchController.mapView = mapView
-
         
-        let connectionBtn = UIButton(frame: CGRect(x: 20, y: self.view.frame.height - 60, width: self.view.frame.width - 40, height: 40))
-        connectionBtn.setTitle("Je suis commerçant", for: .normal)
-        connectionBtn.setTitleColor(.white, for: .normal)
-        connectionBtn.backgroundColor = .blue
-        connectionBtn.layer.cornerRadius = 20
+        bottomView = UIView(frame: CGRect(x: 0, y: self.view.frame.height - 60, width: self.view.frame.width, height: 60))
+        bottomView?.backgroundColor = .white
         
-        self.view.addSubview(connectionBtn)
+        let upBtn = UIButton(frame: CGRect(x: 0, y: 5, width: self.view.frame.width, height: 20))
+        upBtn.setImage(UIImage(systemName: "chevron.up"), for: .normal)
+        upBtn.tintColor = .gray
+        upBtn.backgroundColor = .white
+        upBtn.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(showButtons)))
+        
+        self.view.addSubview(bottomView!)
+        bottomView?.addSubview(upBtn)
     }
 
     func initLocation() {
@@ -76,6 +83,37 @@ class ViewController: UIViewController {
             locationManager.delegate = self
             locationManager.desiredAccuracy = kCLLocationAccuracyNearestTenMeters
             locationManager.startUpdatingLocation()
+        }
+    }
+    
+    @objc func showButtons(_ sender: UIButton) {
+        UIView.animate(withDuration: 0.3) {
+            self.bottomView?.frame = CGRect(x: 0,
+                                            y: self.view.frame.height - 220,
+                                            width: self.view.frame.width,
+                                            height: 220)
+            
+            let label1 = UILabel(frame: CGRect(x: 10, y: 30, width: self.view.frame.width, height: 25))
+            label1.text = "Vous êtes un restaurant ?"
+            label1.textAlignment = .center
+            self.bottomView?.addSubview(label1)
+            
+            let label2 = UILabel(frame: CGRect(x: 10, y: 55, width: self.view.frame.width, height: 25))
+            label2.text = "Un commerce ?"
+            label2.textAlignment = .center
+            self.bottomView?.addSubview(label2)
+            
+            let connectionBtn = UIButton(frame: CGRect(x: 20, y: 95, width: self.view.frame.width - 40, height: 40))
+            connectionBtn.setTitle("Se connecter", for: .normal)
+            connectionBtn.setTitleColor(.white, for: .normal)
+            connectionBtn.backgroundColor = .gray
+            self.bottomView?.addSubview(connectionBtn)
+            
+            let signupBtn = UIButton(frame: CGRect(x: 20, y: connectionBtn.frame.origin.y + connectionBtn.frame.height + 10, width: self.view.frame.width - 40, height: 40))
+            signupBtn.setTitle("S'inscrire", for: .normal)
+            signupBtn.setTitleColor(.white, for: .normal)
+            signupBtn.backgroundColor = .red
+            self.bottomView?.addSubview(signupBtn)
         }
     }
 
