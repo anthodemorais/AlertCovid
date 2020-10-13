@@ -13,6 +13,7 @@
 		2BFAFBD72535999300D9B6C0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2BFAFBD52535999300D9B6C0 /* Main.storyboard */; };
 		2BFAFBD92535999700D9B6C0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2BFAFBD82535999700D9B6C0 /* Assets.xcassets */; };
 		2BFAFBDC2535999700D9B6C0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2BFAFBDA2535999700D9B6C0 /* LaunchScreen.storyboard */; };
+		2BFAFBE92535A80800D9B6C0 /* LocationSearchController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BFAFBE82535A80800D9B6C0 /* LocationSearchController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		2BFAFBD82535999700D9B6C0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2BFAFBDB2535999700D9B6C0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2BFAFBDD2535999700D9B6C0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2BFAFBE82535A80800D9B6C0 /* LocationSearchController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationSearchController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +61,7 @@
 				2BFAFBCF2535999300D9B6C0 /* AppDelegate.swift */,
 				2BFAFBD12535999300D9B6C0 /* SceneDelegate.swift */,
 				2BFAFBD32535999300D9B6C0 /* ViewController.swift */,
+				2BFAFBE82535A80800D9B6C0 /* LocationSearchController.swift */,
 				2BFAFBD52535999300D9B6C0 /* Main.storyboard */,
 				2BFAFBD82535999700D9B6C0 /* Assets.xcassets */,
 				2BFAFBDA2535999700D9B6C0 /* LaunchScreen.storyboard */,
@@ -137,6 +140,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2BFAFBE92535A80800D9B6C0 /* LocationSearchController.swift in Sources */,
 				2BFAFBD42535999300D9B6C0 /* ViewController.swift in Sources */,
 				2BFAFBD02535999300D9B6C0 /* AppDelegate.swift in Sources */,
 				2BFAFBD22535999300D9B6C0 /* SceneDelegate.swift in Sources */,
