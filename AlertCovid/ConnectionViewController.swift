@@ -18,6 +18,9 @@ class ConnectionViewController: UIViewController {
         connectionBtn.setTitle("Continuer", for: .normal)
         connectionBtn.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(goToServices)))
         self.view.addSubview(connectionBtn)
+        
+        self.addBackBtn()
+        self.addBackgroundImage()
     }
     
     @objc func goToServices() {
@@ -26,4 +29,33 @@ class ConnectionViewController: UIViewController {
         self.present(vc, animated: true, completion: nil)
     }
 
+}
+
+extension UIViewController {
+    
+    func addBackBtn() {
+        let backBtn = BackButton()
+        self.view.addSubview(backBtn)
+        backBtn.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(back)))
+        
+        backBtn.translatesAutoresizingMaskIntoConstraints = false
+        NSLayoutConstraint.activate([
+            backBtn.leadingAnchor.constraint(equalTo: self.view.leadingAnchor, constant: 20),
+            backBtn.widthAnchor.constraint(equalToConstant: 25),
+            backBtn.heightAnchor.constraint(equalToConstant: 25),
+            backBtn.topAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.topAnchor)
+        ])
+    }
+    
+    @objc func back() {
+        self.dismiss(animated: true, completion: nil)
+    }
+    
+    func addBackgroundImage() {
+        let background = UIImageView(image: UIImage(named: "background"))
+        background.frame = self.view.frame
+        self.view.addSubview(background)
+        background.layer.zPosition = -1
+    }
+    
 }

@@ -18,6 +18,9 @@ class FirstSignUpViewController: UIViewController {
         signupBtn.setTitle("Continuer", for: .normal)
         signupBtn.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(goToSecond)))
         self.view.addSubview(signupBtn)
+        
+        self.addBackBtn()
+        self.addBackgroundImage()
     }
     
     @objc func goToSecond() {

@@ -71,7 +71,7 @@ class ViewController: UIViewController {
         
         upBtn = UIButton(frame: CGRect(x: 0, y: 5, width: self.view.frame.width, height: 20))
         upBtn?.setImage(UIImage(systemName: "chevron.up"), for: .normal)
-        upBtn?.tintColor = .gray
+        upBtn?.tintColor = UIColor(named: "gray")
         upBtn?.backgroundColor = .white
         upBtn?.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(showButtons)))
         

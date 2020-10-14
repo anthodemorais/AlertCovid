@@ -12,8 +12,7 @@ class ServicesViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        self.modalPresentationStyle = .fullScreen
-        self.view.backgroundColor = .white
+        self.addBackgroundImage()
     }
     
 
