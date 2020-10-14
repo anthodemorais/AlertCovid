@@ -7,6 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2B7A13612536F8C500A2ABD6 /* ConnectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B7A13602536F8C500A2ABD6 /* ConnectionViewController.swift */; };
+		2B7A13642536F8E300A2ABD6 /* FirstSignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B7A13632536F8E300A2ABD6 /* FirstSignUpViewController.swift */; };
+		2B7A13672536F8F100A2ABD6 /* SecondSignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B7A13662536F8F100A2ABD6 /* SecondSignUpViewController.swift */; };
+		2B7A136A2536F94900A2ABD6 /* ServicesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B7A13692536F94900A2ABD6 /* ServicesViewController.swift */; };
+		2B8CADAC2536EF040023DAF1 /* MainButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B8CADAB2536EF040023DAF1 /* MainButton.swift */; };
+		2B8CADB22536F16D0023DAF1 /* Poppins-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2B8CADAF2536F15D0023DAF1 /* Poppins-Bold.ttf */; };
+		2B8CADB42536F1750023DAF1 /* Poppins-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2B8CADB02536F15D0023DAF1 /* Poppins-Regular.ttf */; };
+		2B8CADB62536F1780023DAF1 /* Poppins-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2B8CADB12536F15E0023DAF1 /* Poppins-SemiBold.ttf */; };
+		2B8CADB92536F3EA0023DAF1 /* TextLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B8CADB82536F3EA0023DAF1 /* TextLabel.swift */; };
 		2BFAFBD02535999300D9B6C0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BFAFBCF2535999300D9B6C0 /* AppDelegate.swift */; };
 		2BFAFBD22535999300D9B6C0 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BFAFBD12535999300D9B6C0 /* SceneDelegate.swift */; };
 		2BFAFBD42535999300D9B6C0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BFAFBD32535999300D9B6C0 /* ViewController.swift */; };
@@ -17,6 +26,15 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2B7A13602536F8C500A2ABD6 /* ConnectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConnectionViewController.swift; sourceTree = "<group>"; };
+		2B7A13632536F8E300A2ABD6 /* FirstSignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstSignUpViewController.swift; sourceTree = "<group>"; };
+		2B7A13662536F8F100A2ABD6 /* SecondSignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondSignUpViewController.swift; sourceTree = "<group>"; };
+		2B7A13692536F94900A2ABD6 /* ServicesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServicesViewController.swift; sourceTree = "<group>"; };
+		2B8CADAB2536EF040023DAF1 /* MainButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainButton.swift; sourceTree = "<group>"; };
+		2B8CADAF2536F15D0023DAF1 /* Poppins-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Bold.ttf"; sourceTree = "<group>"; };
+		2B8CADB02536F15D0023DAF1 /* Poppins-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Regular.ttf"; sourceTree = "<group>"; };
+		2B8CADB12536F15E0023DAF1 /* Poppins-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-SemiBold.ttf"; sourceTree = "<group>"; };
+		2B8CADB82536F3EA0023DAF1 /* TextLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextLabel.swift; sourceTree = "<group>"; };
 		2BFAFBCC2535999300D9B6C0 /* AlertCovid.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AlertCovid.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2BFAFBCF2535999300D9B6C0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2BFAFBD12535999300D9B6C0 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -39,6 +57,25 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2B8CADAA2536EEDB0023DAF1 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				2B8CADAB2536EF040023DAF1 /* MainButton.swift */,
+				2B8CADB82536F3EA0023DAF1 /* TextLabel.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		2B8CADAE2536F14D0023DAF1 /* fonts */ = {
+			isa = PBXGroup;
+			children = (
+				2B8CADAF2536F15D0023DAF1 /* Poppins-Bold.ttf */,
+				2B8CADB02536F15D0023DAF1 /* Poppins-Regular.ttf */,
+				2B8CADB12536F15E0023DAF1 /* Poppins-SemiBold.ttf */,
+			);
+			path = fonts;
+			sourceTree = "<group>";
+		};
 		2BFAFBC32535999300D9B6C0 = {
 			isa = PBXGroup;
 			children = (
@@ -58,6 +95,8 @@
 		2BFAFBCE2535999300D9B6C0 /* AlertCovid */ = {
 			isa = PBXGroup;
 			children = (
+				2B8CADAE2536F14D0023DAF1 /* fonts */,
+				2B8CADAA2536EEDB0023DAF1 /* Components */,
 				2BFAFBCF2535999300D9B6C0 /* AppDelegate.swift */,
 				2BFAFBD12535999300D9B6C0 /* SceneDelegate.swift */,
 				2BFAFBD32535999300D9B6C0 /* ViewController.swift */,
@@ -66,6 +105,10 @@
 				2BFAFBD82535999700D9B6C0 /* Assets.xcassets */,
 				2BFAFBDA2535999700D9B6C0 /* LaunchScreen.storyboard */,
 				2BFAFBDD2535999700D9B6C0 /* Info.plist */,
+				2B7A13602536F8C500A2ABD6 /* ConnectionViewController.swift */,
+				2B7A13632536F8E300A2ABD6 /* FirstSignUpViewController.swift */,
+				2B7A13662536F8F100A2ABD6 /* SecondSignUpViewController.swift */,
+				2B7A13692536F94900A2ABD6 /* ServicesViewController.swift */,
 			);
 			path = AlertCovid;
 			sourceTree = "<group>";
@@ -130,6 +173,9 @@
 				2BFAFBDC2535999700D9B6C0 /* LaunchScreen.storyboard in Resources */,
 				2BFAFBD92535999700D9B6C0 /* Assets.xcassets in Resources */,
 				2BFAFBD72535999300D9B6C0 /* Main.storyboard in Resources */,
+				2B8CADB62536F1780023DAF1 /* Poppins-SemiBold.ttf in Resources */,
+				2B8CADB22536F16D0023DAF1 /* Poppins-Bold.ttf in Resources */,
+				2B8CADB42536F1750023DAF1 /* Poppins-Regular.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -141,9 +187,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				2BFAFBE92535A80800D9B6C0 /* LocationSearchController.swift in Sources */,
+				2B7A13612536F8C500A2ABD6 /* ConnectionViewController.swift in Sources */,
 				2BFAFBD42535999300D9B6C0 /* ViewController.swift in Sources */,
 				2BFAFBD02535999300D9B6C0 /* AppDelegate.swift in Sources */,
+				2B8CADB92536F3EA0023DAF1 /* TextLabel.swift in Sources */,
 				2BFAFBD22535999300D9B6C0 /* SceneDelegate.swift in Sources */,
+				2B7A13672536F8F100A2ABD6 /* SecondSignUpViewController.swift in Sources */,
+				2B8CADAC2536EF040023DAF1 /* MainButton.swift in Sources */,
+				2B7A136A2536F94900A2ABD6 /* ServicesViewController.swift in Sources */,
+				2B7A13642536F8E300A2ABD6 /* FirstSignUpViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

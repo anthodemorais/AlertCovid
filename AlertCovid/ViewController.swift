@@ -13,6 +13,7 @@ class ViewController: UIViewController {
     var initialLocation = CLLocation(latitude: 48.856614, longitude: 2.3522219)
     var mapView: MKMapView?
     var bottomView: UIView?
+    var upBtn: UIButton?
     let locationManager = CLLocationManager()
     
     var resultSearchController: UISearchController?
@@ -35,16 +36,15 @@ class ViewController: UIViewController {
             self.view.addSubview(map)
         }
         
-        let topView = UIView(frame: CGRect(x: 5, y: 0, width: self.view.frame.width, height: 36))
+        let topView = UIView(frame: CGRect(x: 0, y: 0, width: self.view.frame.width, height: 50))
         topView.backgroundColor = .white
-        topView.layer.cornerRadius = 10
-        
+
         self.view.addSubview(topView)
         topView.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([
-            topView.topAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.topAnchor, constant: -2),
-            topView.leadingAnchor.constraint(equalTo: self.view.leadingAnchor, constant: 13),
-            topView.trailingAnchor.constraint(equalTo: self.view.trailingAnchor, constant: -13),
+            topView.topAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.topAnchor),
+            topView.leadingAnchor.constraint(equalTo: self.view.leadingAnchor),
+            topView.trailingAnchor.constraint(equalTo: self.view.trailingAnchor),
             topView.heightAnchor.constraint(equalToConstant: topView.frame.height)
         ])
         
@@ -53,10 +53,13 @@ class ViewController: UIViewController {
         resultSearchController?.searchResultsUpdater = locationSearchController
         
         let searchBar = resultSearchController!.searchBar
-        searchBar.searchBarStyle = .minimal
-        searchBar.sizeToFit()
-        searchBar.frame = CGRect(x: 5, y: topView.frame.origin.y + topView.frame.height, width: self.view.frame.width - 10, height: searchBar.frame.height)
-        self.view.addSubview(searchBar)
+        searchBar.searchBarStyle = .prominent
+        searchBar.backgroundColor = UIColor(white: 1, alpha: 0)
+//        searchBar.sizeToFit()
+        searchBar.frame = CGRect(x: 0, y: 0, width: topView.frame.width, height: topView.frame.height)
+        searchBar.searchTextField.font = UIFont(name: "Poppins-Regular", size: 17)
+        searchBar.placeholder = "Paris 15"
+        topView.addSubview(searchBar)
         
         resultSearchController?.hidesNavigationBarDuringPresentation = false
         definesPresentationContext = true
@@ -66,14 +69,14 @@ class ViewController: UIViewController {
         bottomView = UIView(frame: CGRect(x: 0, y: self.view.frame.height - 60, width: self.view.frame.width, height: 60))
         bottomView?.backgroundColor = .white
         
-        let upBtn = UIButton(frame: CGRect(x: 0, y: 5, width: self.view.frame.width, height: 20))
-        upBtn.setImage(UIImage(systemName: "chevron.up"), for: .normal)
-        upBtn.tintColor = .gray
-        upBtn.backgroundColor = .white
-        upBtn.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(showButtons)))
+        upBtn = UIButton(frame: CGRect(x: 0, y: 5, width: self.view.frame.width, height: 20))
+        upBtn?.setImage(UIImage(systemName: "chevron.up"), for: .normal)
+        upBtn?.tintColor = .gray
+        upBtn?.backgroundColor = .white
+        upBtn?.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(showButtons)))
         
         self.view.addSubview(bottomView!)
-        bottomView?.addSubview(upBtn)
+        bottomView?.addSubview(upBtn!)
     }
 
     func initLocation() {
@@ -89,32 +92,47 @@ class ViewController: UIViewController {
     @objc func showButtons(_ sender: UIButton) {
         UIView.animate(withDuration: 0.3) {
             self.bottomView?.frame = CGRect(x: 0,
-                                            y: self.view.frame.height - 220,
+                                            y: self.view.frame.height - 240,
                                             width: self.view.frame.width,
-                                            height: 220)
+                                            height: 240)
             
-            let label1 = UILabel(frame: CGRect(x: 10, y: 30, width: self.view.frame.width, height: 25))
+            let label1 = TextLabel(frame: CGRect(x: 10, y: 15, width: self.view.frame.width, height: 25))
             label1.text = "Vous êtes un restaurant ?"
             label1.textAlignment = .center
+            label1.configure(type: .subtitle)
             self.bottomView?.addSubview(label1)
             
-            let label2 = UILabel(frame: CGRect(x: 10, y: 55, width: self.view.frame.width, height: 25))
-            label2.text = "Un commerce ?"
+            let label2 = TextLabel(frame: CGRect(x: 10, y: 45, width: self.view.frame.width, height: 25))
+            label2.text = "Un magasin ?"
             label2.textAlignment = .center
+            label2.configure(type: .subtitle)
             self.bottomView?.addSubview(label2)
             
-            let connectionBtn = UIButton(frame: CGRect(x: 20, y: 95, width: self.view.frame.width - 40, height: 40))
-            connectionBtn.setTitle("Se connecter", for: .normal)
-            connectionBtn.setTitleColor(.white, for: .normal)
-            connectionBtn.backgroundColor = .gray
-            self.bottomView?.addSubview(connectionBtn)
-            
-            let signupBtn = UIButton(frame: CGRect(x: 20, y: connectionBtn.frame.origin.y + connectionBtn.frame.height + 10, width: self.view.frame.width - 40, height: 40))
-            signupBtn.setTitle("S'inscrire", for: .normal)
-            signupBtn.setTitleColor(.white, for: .normal)
-            signupBtn.backgroundColor = .red
+            let signupBtn = MainButton(frame: CGRect(x: 30, y: 100, width: self.view.frame.width - 60, height: 44))
+            signupBtn.setTitle("Inscription", for: .normal)
+            signupBtn.isGrey = true
             self.bottomView?.addSubview(signupBtn)
+            signupBtn.addTarget(self, action: #selector(self.goToSignUp), for: .touchUpInside)
+            
+            let connectionBtn = MainButton(frame: CGRect(x: 30, y: signupBtn.frame.origin.y + signupBtn.frame.height + 20, width: self.view.frame.width - 60, height: 44))
+            connectionBtn.setTitle("Connexion", for: .normal)
+            self.bottomView?.addSubview(connectionBtn)
+            connectionBtn.addTarget(self, action: #selector(self.goToConnection), for: .touchUpInside)
+            
+            self.upBtn?.isHidden = true
         }
+    }
+    
+    @objc func goToSignUp() {
+        let vc = FirstSignUpViewController()
+        vc.modalPresentationStyle = .fullScreen
+        self.present(vc, animated: true, completion: nil)
+    }
+    
+    @objc func goToConnection() {
+        let vc = ConnectionViewController()
+        vc.modalPresentationStyle = .fullScreen
+        self.present(vc, animated: true, completion: nil)
     }
 
 }
@@ -144,16 +162,4 @@ extension ViewController: CLLocationManagerDelegate {
         guard let loc: CLLocation = manager.location else { return }
         self.mapView?.centerToLocation(loc)
     }
-}
-
-extension ViewController: UISearchResultsUpdating {
-    
-    func updateSearchResults(for searchController: UISearchController) {
-        
-    }
-    
-}
-
-extension ViewController: UISearchBarDelegate {
-    
 }
