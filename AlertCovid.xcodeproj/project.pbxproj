@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2B5668F22537432A000A6DB7 /* HistoryCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B5668F12537432A000A6DB7 /* HistoryCollectionViewController.swift */; };
+		2B5668F525374494000A6DB7 /* CustomCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B5668F425374494000A6DB7 /* CustomCollectionViewCell.swift */; };
 		2B7A13612536F8C500A2ABD6 /* ConnectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B7A13602536F8C500A2ABD6 /* ConnectionViewController.swift */; };
 		2B7A13642536F8E300A2ABD6 /* FirstSignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B7A13632536F8E300A2ABD6 /* FirstSignUpViewController.swift */; };
 		2B7A13672536F8F100A2ABD6 /* SecondSignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B7A13662536F8F100A2ABD6 /* SecondSignUpViewController.swift */; };
@@ -27,6 +29,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2B5668F12537432A000A6DB7 /* HistoryCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryCollectionViewController.swift; sourceTree = "<group>"; };
+		2B5668F425374494000A6DB7 /* CustomCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCollectionViewCell.swift; sourceTree = "<group>"; };
 		2B7A13602536F8C500A2ABD6 /* ConnectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConnectionViewController.swift; sourceTree = "<group>"; };
 		2B7A13632536F8E300A2ABD6 /* FirstSignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstSignUpViewController.swift; sourceTree = "<group>"; };
 		2B7A13662536F8F100A2ABD6 /* SecondSignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondSignUpViewController.swift; sourceTree = "<group>"; };
@@ -65,6 +69,7 @@
 				2B8CADAB2536EF040023DAF1 /* MainButton.swift */,
 				2B8CADB82536F3EA0023DAF1 /* TextLabel.swift */,
 				2B7A136C2537080D00A2ABD6 /* BackButton.swift */,
+				2B5668F425374494000A6DB7 /* CustomCollectionViewCell.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -112,6 +117,7 @@
 				2B7A13632536F8E300A2ABD6 /* FirstSignUpViewController.swift */,
 				2B7A13662536F8F100A2ABD6 /* SecondSignUpViewController.swift */,
 				2B7A13692536F94900A2ABD6 /* ServicesViewController.swift */,
+				2B5668F12537432A000A6DB7 /* HistoryCollectionViewController.swift */,
 			);
 			path = AlertCovid;
 			sourceTree = "<group>";
@@ -192,8 +198,10 @@
 				2BFAFBE92535A80800D9B6C0 /* LocationSearchController.swift in Sources */,
 				2B7A13612536F8C500A2ABD6 /* ConnectionViewController.swift in Sources */,
 				2B7A136D2537080D00A2ABD6 /* BackButton.swift in Sources */,
+				2B5668F525374494000A6DB7 /* CustomCollectionViewCell.swift in Sources */,
 				2BFAFBD42535999300D9B6C0 /* ViewController.swift in Sources */,
 				2BFAFBD02535999300D9B6C0 /* AppDelegate.swift in Sources */,
+				2B5668F22537432A000A6DB7 /* HistoryCollectionViewController.swift in Sources */,
 				2B8CADB92536F3EA0023DAF1 /* TextLabel.swift in Sources */,
 				2BFAFBD22535999300D9B6C0 /* SceneDelegate.swift in Sources */,
 				2B7A13672536F8F100A2ABD6 /* SecondSignUpViewController.swift in Sources */,

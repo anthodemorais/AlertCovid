@@ -21,6 +21,7 @@ class TextLabel: UILabel {
         switch type {
             case .title:
                 self.font = UIFont(name: "Poppins-Bold", size: 25)
+                self.textAlignment = .center
             case .subtitle:
                 self.font = UIFont(name: "Poppins-SemiBold", size: 20)
             case .normal:
