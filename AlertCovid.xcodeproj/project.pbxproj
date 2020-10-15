@@ -21,6 +21,7 @@
 		2B8CADB92536F3EA0023DAF1 /* TextLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B8CADB82536F3EA0023DAF1 /* TextLabel.swift */; };
 		2BD26D4025383D6D0045582C /* Input.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BD26D3F25383D6D0045582C /* Input.swift */; };
 		2BD26D4325383DCF0045582C /* NewServiceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BD26D4225383DCF0045582C /* NewServiceViewController.swift */; };
+		2BD26D46253842870045582C /* ServiceHistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BD26D45253842870045582C /* ServiceHistoryViewController.swift */; };
 		2BFAFBD02535999300D9B6C0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BFAFBCF2535999300D9B6C0 /* AppDelegate.swift */; };
 		2BFAFBD22535999300D9B6C0 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BFAFBD12535999300D9B6C0 /* SceneDelegate.swift */; };
 		2BFAFBD42535999300D9B6C0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BFAFBD32535999300D9B6C0 /* ViewController.swift */; };
@@ -45,6 +46,7 @@
 		2B8CADB82536F3EA0023DAF1 /* TextLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextLabel.swift; sourceTree = "<group>"; };
 		2BD26D3F25383D6D0045582C /* Input.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Input.swift; sourceTree = "<group>"; };
 		2BD26D4225383DCF0045582C /* NewServiceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewServiceViewController.swift; sourceTree = "<group>"; };
+		2BD26D45253842870045582C /* ServiceHistoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceHistoryViewController.swift; sourceTree = "<group>"; };
 		2BFAFBCC2535999300D9B6C0 /* AlertCovid.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AlertCovid.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2BFAFBCF2535999300D9B6C0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2BFAFBD12535999300D9B6C0 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -124,6 +126,7 @@
 				2B7A13692536F94900A2ABD6 /* ServicesViewController.swift */,
 				2B5668F12537432A000A6DB7 /* HistoryCollectionViewController.swift */,
 				2BD26D4225383DCF0045582C /* NewServiceViewController.swift */,
+				2BD26D45253842870045582C /* ServiceHistoryViewController.swift */,
 			);
 			path = AlertCovid;
 			sourceTree = "<group>";
@@ -212,6 +215,7 @@
 				2B8CADB92536F3EA0023DAF1 /* TextLabel.swift in Sources */,
 				2BFAFBD22535999300D9B6C0 /* SceneDelegate.swift in Sources */,
 				2B7A13672536F8F100A2ABD6 /* SecondSignUpViewController.swift in Sources */,
+				2BD26D46253842870045582C /* ServiceHistoryViewController.swift in Sources */,
 				2B8CADAC2536EF040023DAF1 /* MainButton.swift in Sources */,
 				2BD26D4325383DCF0045582C /* NewServiceViewController.swift in Sources */,
 				2B7A136A2536F94900A2ABD6 /* ServicesViewController.swift in Sources */,

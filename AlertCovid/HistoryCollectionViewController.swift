@@ -64,5 +64,12 @@ class HistoryCollectionViewController: UIViewController, UICollectionViewDelegat
 
         return cell ?? UICollectionViewCell()
     }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let vc = ServiceHistoryViewController()
+        vc.data = elements[indexPath.row]
+        vc.modalPresentationStyle = .fullScreen
+        self.present(vc, animated: true, completion: nil)
+    }
 
 }
