@@ -11,19 +11,40 @@ class ServicesViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        self.view.backgroundColor = UIColor(named: "lightgray")
 
-        self.addBackgroundImage()
+        let label1 = TextLabel(frame: CGRect(x: 0, y: 55, width: self.view.frame.width, height: 25))
+        label1.text = "Création de service"
+        label1.textAlignment = .center
+        label1.configure(type: .title)
+        self.view.addSubview(label1)
+        
+        let service = MainButton(frame: CGRect(x: 30, y: 150, width: self.view.frame.width - 60, height: 80))
+        service.setTitle("Nouveau service", for: .normal)
+        service.isWhite = true
+        service.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(goToNewService)))
+        self.view.addSubview(service)
+        
+        let history = MainButton(frame: CGRect(x: 30, y: 250, width: self.view.frame.width - 60, height: 80))
+        history.setTitle("Historique", for: .normal)
+        history.isWhite = true
+        history.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(goToHistory)))
+        self.view.addSubview(history)
+        
+        self.addBackBtn()
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    @objc func goToHistory() {
+        let vc = HistoryCollectionViewController()
+        vc.modalPresentationStyle = .fullScreen
+        self.present(vc, animated: true, completion: nil)
     }
-    */
+    
+    @objc func goToNewService() {
+        let vc = NewServiceViewController()
+        vc.modalPresentationStyle = .fullScreen
+        self.present(vc, animated: true, completion: nil)
+    }
 
 }
