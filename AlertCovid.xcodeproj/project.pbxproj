@@ -26,6 +26,7 @@
 		2BFAFBD92535999700D9B6C0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2BFAFBD82535999700D9B6C0 /* Assets.xcassets */; };
 		2BFAFBDC2535999700D9B6C0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2BFAFBDA2535999700D9B6C0 /* LaunchScreen.storyboard */; };
 		2BFAFBE92535A80800D9B6C0 /* LocationSearchController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BFAFBE82535A80800D9B6C0 /* LocationSearchController.swift */; };
+		959C8CDF25373E3C00F05B55 /* CreationServiceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 959C8CDE25373E3C00F05B55 /* CreationServiceViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -50,6 +51,7 @@
 		2BFAFBDB2535999700D9B6C0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2BFAFBDD2535999700D9B6C0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2BFAFBE82535A80800D9B6C0 /* LocationSearchController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationSearchController.swift; sourceTree = "<group>"; };
+		959C8CDE25373E3C00F05B55 /* CreationServiceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreationServiceViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -110,6 +112,7 @@
 				2BFAFBD32535999300D9B6C0 /* ViewController.swift */,
 				2BFAFBE82535A80800D9B6C0 /* LocationSearchController.swift */,
 				2BFAFBD52535999300D9B6C0 /* Main.storyboard */,
+				959C8CDE25373E3C00F05B55 /* CreationServiceViewController.swift */,
 				2BFAFBD82535999700D9B6C0 /* Assets.xcassets */,
 				2BFAFBDA2535999700D9B6C0 /* LaunchScreen.storyboard */,
 				2BFAFBDD2535999700D9B6C0 /* Info.plist */,
@@ -204,6 +207,7 @@
 				2B5668F22537432A000A6DB7 /* HistoryCollectionViewController.swift in Sources */,
 				2B8CADB92536F3EA0023DAF1 /* TextLabel.swift in Sources */,
 				2BFAFBD22535999300D9B6C0 /* SceneDelegate.swift in Sources */,
+				959C8CDF25373E3C00F05B55 /* CreationServiceViewController.swift in Sources */,
 				2B7A13672536F8F100A2ABD6 /* SecondSignUpViewController.swift in Sources */,
 				2B8CADAC2536EF040023DAF1 /* MainButton.swift in Sources */,
 				2B7A136A2536F94900A2ABD6 /* ServicesViewController.swift in Sources */,
