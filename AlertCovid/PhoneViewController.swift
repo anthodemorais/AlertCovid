@@ -58,18 +58,23 @@ class PhoneViewController: UIViewController, UITextFieldDelegate {
         let width = ((self.view.frame.width - 60) - 4 * 20) / 5
         
         phone1 = PhoneInput(frame: CGRect(x: 30, y: inputLabel.frame.origin.y + 45, width: width, height: 30))
+        phone1.keyboardType = .numberPad
         self.view.addSubview(phone1)
         
         phone2 = PhoneInput(frame: CGRect(x: phone1.frame.origin.x + width + 20, y: phone1.frame.origin.y, width: width, height: 30))
+        phone2.keyboardType = .numberPad
         self.view.addSubview(phone2)
         
         phone3 = PhoneInput(frame: CGRect(x: phone2.frame.origin.x + width + 20, y: phone1.frame.origin.y, width: width, height: 30))
+        phone3.keyboardType = .numberPad
         self.view.addSubview(phone3)
         
         phone4 = PhoneInput(frame: CGRect(x: phone3.frame.origin.x + width + 20, y: phone1.frame.origin.y, width: width, height: 30))
+        phone4.keyboardType = .numberPad
         self.view.addSubview(phone4)
         
         phone5 = PhoneInput(frame: CGRect(x: phone4.frame.origin.x + width + 20, y: phone1.frame.origin.y, width: width, height: 30))
+        phone5.keyboardType = .numberPad
         self.view.addSubview(phone5)
         
         
@@ -120,7 +125,10 @@ class PhoneViewController: UIViewController, UITextFieldDelegate {
         emailLabel.attributedText = underlineString
         emailLabel.textColor = .red
         emailLabel.textAlignment = .center
+        emailLabel.isUserInteractionEnabled = true
         self.view.addSubview(emailLabel)
+        
+        emailLabel.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(goToEmail)))
         
         let nurseImg = UIImageView(image: UIImage(named: "nurse"))
         nurseImg.frame = CGRect(x: -self.view.frame.width/4, y: self.view.frame.height - 300, width: self.view.frame.width, height: self.view.frame.width)
@@ -184,6 +192,13 @@ class PhoneViewController: UIViewController, UITextFieldDelegate {
         
         
         self.present(ac, animated: true, completion: nil)
+    }
+    
+    @objc func goToEmail(_ sender: UIView) {
+        let vc = EmailViewController()
+        vc.modalPresentationStyle = .fullScreen
+        vc.serviceName = self.serviceName
+        self.present(vc, animated: true, completion: nil)
     }
 
 }
