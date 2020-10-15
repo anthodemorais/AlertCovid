@@ -25,6 +25,7 @@ class ConnectionViewController: UIViewController {
         
         let input2 = Input(frame: CGRect(x: 30, y: 330, width: self.view.frame.width - 60, height: 50))
         input2.placeholder = "Mot de passe"
+        input2.isSecureTextEntry = true
         self.view.addSubview(input2)
         
         let label1 = TextLabel(frame: CGRect(x: 32, y: 370, width: self.view.frame.width - 60, height: 50))
