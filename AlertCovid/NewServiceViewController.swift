@@ -8,6 +8,8 @@
 import UIKit
 
 class NewServiceViewController: UIViewController {
+    
+    var serviceField: Input?
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,9 +23,9 @@ class NewServiceViewController: UIViewController {
         label1.configure(type: .title)
         self.view.addSubview(label1)
         
-        let input1 = Input(frame: CGRect(x: 30, y: 160, width: self.view.frame.width - 60, height: 50))
-        input1.placeholder = "Nom de service"
-        self.view.addSubview(input1)
+        serviceField = Input(frame: CGRect(x: 30, y: 160, width: self.view.frame.width - 60, height: 50))
+        serviceField?.placeholder = "Nom de service"
+        self.view.addSubview(serviceField!)
         
         let input2 = Input(frame: CGRect(x: 30, y: 250, width: self.view.frame.width - 60, height: 50))
         let date = Date()
@@ -36,9 +38,17 @@ class NewServiceViewController: UIViewController {
         
         let service = MainButton(frame: CGRect(x: 30, y: 340, width: self.view.frame.width - 60, height: 40))
         service.setTitle("Enregister", for: .normal)
+        service.addTarget(self, action: #selector(goToPhone), for: .touchUpInside)
         self.view.addSubview(service)
         
         self.addBackBtn()
+    }
+    
+    @objc func goToPhone(_ sender: UIView) {
+        let vc = PhoneViewController()
+        vc.serviceName = serviceField!.text
+        vc.modalPresentationStyle = .fullScreen
+        self.present(vc, animated: true, completion: nil)
     }
 
 }

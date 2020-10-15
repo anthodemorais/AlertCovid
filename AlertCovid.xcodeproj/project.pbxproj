@@ -14,6 +14,7 @@
 		2B7A13672536F8F100A2ABD6 /* SecondSignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B7A13662536F8F100A2ABD6 /* SecondSignUpViewController.swift */; };
 		2B7A136A2536F94900A2ABD6 /* ServicesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B7A13692536F94900A2ABD6 /* ServicesViewController.swift */; };
 		2B7A136D2537080D00A2ABD6 /* BackButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B7A136C2537080D00A2ABD6 /* BackButton.swift */; };
+		2B7CD0FB25388D8000D99AB9 /* EmailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B7CD0FA25388D8000D99AB9 /* EmailViewController.swift */; };
 		2B8CADAC2536EF040023DAF1 /* MainButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B8CADAB2536EF040023DAF1 /* MainButton.swift */; };
 		2B8CADB22536F16D0023DAF1 /* Poppins-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2B8CADAF2536F15D0023DAF1 /* Poppins-Bold.ttf */; };
 		2B8CADB42536F1750023DAF1 /* Poppins-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2B8CADB02536F15D0023DAF1 /* Poppins-Regular.ttf */; };
@@ -22,6 +23,8 @@
 		2BD26D4025383D6D0045582C /* Input.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BD26D3F25383D6D0045582C /* Input.swift */; };
 		2BD26D4325383DCF0045582C /* NewServiceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BD26D4225383DCF0045582C /* NewServiceViewController.swift */; };
 		2BD26D46253842870045582C /* ServiceHistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BD26D45253842870045582C /* ServiceHistoryViewController.swift */; };
+		2BD26D49253859F30045582C /* PhoneViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BD26D48253859F30045582C /* PhoneViewController.swift */; };
+		2BD26D4C25385E960045582C /* PhoneInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BD26D4B25385E960045582C /* PhoneInput.swift */; };
 		2BFAFBD02535999300D9B6C0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BFAFBCF2535999300D9B6C0 /* AppDelegate.swift */; };
 		2BFAFBD22535999300D9B6C0 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BFAFBD12535999300D9B6C0 /* SceneDelegate.swift */; };
 		2BFAFBD42535999300D9B6C0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BFAFBD32535999300D9B6C0 /* ViewController.swift */; };
@@ -39,6 +42,7 @@
 		2B7A13662536F8F100A2ABD6 /* SecondSignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondSignUpViewController.swift; sourceTree = "<group>"; };
 		2B7A13692536F94900A2ABD6 /* ServicesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServicesViewController.swift; sourceTree = "<group>"; };
 		2B7A136C2537080D00A2ABD6 /* BackButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackButton.swift; sourceTree = "<group>"; };
+		2B7CD0FA25388D8000D99AB9 /* EmailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailViewController.swift; sourceTree = "<group>"; };
 		2B8CADAB2536EF040023DAF1 /* MainButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainButton.swift; sourceTree = "<group>"; };
 		2B8CADAF2536F15D0023DAF1 /* Poppins-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Bold.ttf"; sourceTree = "<group>"; };
 		2B8CADB02536F15D0023DAF1 /* Poppins-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Regular.ttf"; sourceTree = "<group>"; };
@@ -47,6 +51,8 @@
 		2BD26D3F25383D6D0045582C /* Input.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Input.swift; sourceTree = "<group>"; };
 		2BD26D4225383DCF0045582C /* NewServiceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewServiceViewController.swift; sourceTree = "<group>"; };
 		2BD26D45253842870045582C /* ServiceHistoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceHistoryViewController.swift; sourceTree = "<group>"; };
+		2BD26D48253859F30045582C /* PhoneViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhoneViewController.swift; sourceTree = "<group>"; };
+		2BD26D4B25385E960045582C /* PhoneInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhoneInput.swift; sourceTree = "<group>"; };
 		2BFAFBCC2535999300D9B6C0 /* AlertCovid.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AlertCovid.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2BFAFBCF2535999300D9B6C0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2BFAFBD12535999300D9B6C0 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -77,6 +83,7 @@
 				2B7A136C2537080D00A2ABD6 /* BackButton.swift */,
 				2B5668F425374494000A6DB7 /* CustomCollectionViewCell.swift */,
 				2BD26D3F25383D6D0045582C /* Input.swift */,
+				2BD26D4B25385E960045582C /* PhoneInput.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -127,6 +134,8 @@
 				2B5668F12537432A000A6DB7 /* HistoryCollectionViewController.swift */,
 				2BD26D4225383DCF0045582C /* NewServiceViewController.swift */,
 				2BD26D45253842870045582C /* ServiceHistoryViewController.swift */,
+				2BD26D48253859F30045582C /* PhoneViewController.swift */,
+				2B7CD0FA25388D8000D99AB9 /* EmailViewController.swift */,
 			);
 			path = AlertCovid;
 			sourceTree = "<group>";
@@ -213,11 +222,14 @@
 				2BFAFBD02535999300D9B6C0 /* AppDelegate.swift in Sources */,
 				2B5668F22537432A000A6DB7 /* HistoryCollectionViewController.swift in Sources */,
 				2B8CADB92536F3EA0023DAF1 /* TextLabel.swift in Sources */,
+				2BD26D49253859F30045582C /* PhoneViewController.swift in Sources */,
 				2BFAFBD22535999300D9B6C0 /* SceneDelegate.swift in Sources */,
 				2B7A13672536F8F100A2ABD6 /* SecondSignUpViewController.swift in Sources */,
 				2BD26D46253842870045582C /* ServiceHistoryViewController.swift in Sources */,
+				2B7CD0FB25388D8000D99AB9 /* EmailViewController.swift in Sources */,
 				2B8CADAC2536EF040023DAF1 /* MainButton.swift in Sources */,
 				2BD26D4325383DCF0045582C /* NewServiceViewController.swift in Sources */,
+				2BD26D4C25385E960045582C /* PhoneInput.swift in Sources */,
 				2B7A136A2536F94900A2ABD6 /* ServicesViewController.swift in Sources */,
 				2B7A13642536F8E300A2ABD6 /* FirstSignUpViewController.swift in Sources */,
 			);
