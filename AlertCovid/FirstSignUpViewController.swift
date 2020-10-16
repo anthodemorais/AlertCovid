@@ -12,7 +12,7 @@ class FirstSignUpViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.view.backgroundColor = .white
+        self.view.backgroundColor = UIColor(named: "lightgray")
         
         let image = UIImageView(frame: CGRect(x: (self.view.frame.width / 2) - 110 , y: 90, width: 220, height: 110))
         image.image = UIImage(named: "Alert_Covid")
@@ -38,13 +38,20 @@ class FirstSignUpViewController: UIViewController {
         connectionBtn.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(goToServices)))
         self.view.addSubview(connectionBtn)
         
-        let label2 = TextLabel(frame: CGRect(x: 32, y: self.view.frame.height - 110, width: self.view.frame.width - 60, height: 50))
-        label2.text = "Vous avez déjà un compte ? Connexion"
-        label2.configure(type: .normal)
-        label2.textAlignment = .center
-        label2.font = UIFont(name: "Poppins-Regular", size: 14)
-
-        self.view.addSubview(label2)
+        let label = TextLabel(frame: CGRect(x: 0, y: self.view.frame.height - 110, width: self.view.frame.width - 90, height: 50))
+        label.text = "Vous avez déjà un compte ?"
+        label.configure(type: .normal)
+        label.textAlignment = .center
+        self.view.addSubview(label)
+        
+        let createBtn = UIButton(frame: CGRect(x: label.frame.origin.x + label.frame.width - 45, y: self.view.frame.height - 111, width: 100, height: 50))
+        let underlineAttribute = [NSAttributedString.Key.underlineStyle: NSUnderlineStyle.thick.rawValue]
+        let underlineString = NSAttributedString(string: "Connexion", attributes: underlineAttribute)
+        createBtn.setAttributedTitle(underlineString, for: .normal)
+        createBtn.setTitleColor(UIColor(named: "red"), for: .normal)
+        createBtn.titleLabel?.font = UIFont(name: "Poppins-Regular", size: 17)
+        self.view.addSubview(createBtn)
+        createBtn.addTarget(self, action: #selector(goToConnection), for: .touchUpInside)
 
         
         self.addBackBtn()
@@ -59,6 +66,12 @@ class FirstSignUpViewController: UIViewController {
     
     @objc func goToSecond() {
         let vc = SecondSignUpViewController()
+        vc.modalPresentationStyle = .fullScreen
+        self.present(vc, animated: true, completion: nil)
+    }
+    
+    @objc func goToConnection() {
+        let vc = ConnectionViewController()
         vc.modalPresentationStyle = .fullScreen
         self.present(vc, animated: true, completion: nil)
     }

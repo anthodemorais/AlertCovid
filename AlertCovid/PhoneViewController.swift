@@ -106,7 +106,7 @@ class PhoneViewController: UIViewController, UITextFieldDelegate {
         phone4.addTarget(self, action: #selector(textFieldDidChanged), for: .editingChanged)
         phone5.addTarget(self, action: #selector(textFieldDidChanged), for: .editingChanged)
         
-        let registerBtn = MainButton(frame: CGRect(x: 30, y: phone1.frame.origin.y + phone1.frame.height + 40, width: self.view.frame.width - 60, height: 44))
+        let registerBtn = MainButton(frame: CGRect(x: 30, y: phone1.frame.origin.y + phone1.frame.height + 40, width: self.view.frame.width - 60, height: 52))
         registerBtn.setTitle("Enregistrer", for: .normal)
         self.view.addSubview(registerBtn)
         registerBtn.addTarget(self, action: #selector(registerPhone), for: .touchUpInside)

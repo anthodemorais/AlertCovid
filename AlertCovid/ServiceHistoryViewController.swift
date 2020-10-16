@@ -33,7 +33,7 @@ class ServiceHistoryViewController: UIViewController, UITableViewDelegate, UITab
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        self.view.backgroundColor = .white
+        self.view.backgroundColor = UIColor(named: "lightgray")
         self.addBackBtn()
         self.addBackgroundImage()
         

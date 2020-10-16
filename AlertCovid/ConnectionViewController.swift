@@ -12,7 +12,7 @@ class ConnectionViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.view.backgroundColor = .white
+        self.view.backgroundColor = UIColor(named: "lightgray")
         
         let image = UIImageView(frame: CGRect(x: (self.view.frame.width / 2) - 110 , y: 90, width: 220, height: 110))
         image.image = UIImage(named: "Alert_Covid")
@@ -40,10 +40,20 @@ class ConnectionViewController: UIViewController {
         connectionBtn.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(goToServices)))
         self.view.addSubview(connectionBtn)
         
-        let label2 = TextLabel(frame: CGRect(x: 32, y: self.view.frame.height - 110, width: self.view.frame.width - 60, height: 50))
-        label2.text = "Vous n’avez pas de compte ? Créer"
+        let label2 = TextLabel(frame: CGRect(x: 5, y: self.view.frame.height - 110, width: self.view.frame.width - 60, height: 50))
+        label2.text = "Vous n’avez pas de compte ?"
         label2.configure(type: .normal)
+        label2.textAlignment = .center
         self.view.addSubview(label2)
+        
+        let createBtn = UIButton(frame: CGRect(x: label2.frame.origin.x + label2.frame.width - 50, y: self.view.frame.height - 111, width: 50, height: 50))
+        let underlineAttribute = [NSAttributedString.Key.underlineStyle: NSUnderlineStyle.thick.rawValue]
+        let underlineString = NSAttributedString(string: "Créer", attributes: underlineAttribute)
+        createBtn.setAttributedTitle(underlineString, for: .normal)
+        createBtn.setTitleColor(UIColor(named: "red"), for: .normal)
+        createBtn.titleLabel?.font = UIFont(name: "Poppins-Regular", size: 17)
+        self.view.addSubview(createBtn)
+        createBtn.addTarget(self, action: #selector(goToRegister), for: .touchUpInside)
         
         self.addBackBtn()
         self.addBackgroundImage()
@@ -51,6 +61,12 @@ class ConnectionViewController: UIViewController {
     
     @objc func goToServices() {
         let vc = ServicesViewController()
+        vc.modalPresentationStyle = .fullScreen
+        self.present(vc, animated: true, completion: nil)
+    }
+    
+    @objc func goToRegister() {
+        let vc = FirstSignUpViewController()
         vc.modalPresentationStyle = .fullScreen
         self.present(vc, animated: true, completion: nil)
     }

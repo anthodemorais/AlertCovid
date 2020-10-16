@@ -36,7 +36,7 @@ class NewServiceViewController: UIViewController {
         input2.isEnabled = false
         self.view.addSubview(input2)
         
-        let service = MainButton(frame: CGRect(x: 30, y: 340, width: self.view.frame.width - 60, height: 40))
+        let service = MainButton(frame: CGRect(x: 30, y: 340, width: self.view.frame.width - 60, height: 52))
         service.setTitle("Enregister", for: .normal)
         service.addTarget(self, action: #selector(goToPhone), for: .touchUpInside)
         self.view.addSubview(service)

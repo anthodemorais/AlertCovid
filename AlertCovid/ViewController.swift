@@ -14,6 +14,9 @@ class ViewController: UIViewController {
     var mapView: MKMapView?
     var bottomView: UIView?
     var upBtn: UIButton?
+    var downBtn: UIButton?
+    var bottomViewTitle: TextLabel?
+    var bottomViewTitle2: TextLabel?
     let locationManager = CLLocationManager()
     
     var resultSearchController: UISearchController?
@@ -75,6 +78,8 @@ class ViewController: UIViewController {
         upBtn?.backgroundColor = .white
         upBtn?.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(showButtons)))
         
+        self.createBottomView()
+        
         self.view.addSubview(bottomView!)
         bottomView?.addSubview(upBtn!)
     }
@@ -89,24 +94,31 @@ class ViewController: UIViewController {
         }
     }
     
-    @objc func showButtons(_ sender: UIButton) {
+    func createBottomView() {
         UIView.animate(withDuration: 0.3) {
             self.bottomView?.frame = CGRect(x: 0,
                                             y: self.view.frame.height - 240,
                                             width: self.view.frame.width,
                                             height: 240)
             
-            let label1 = TextLabel(frame: CGRect(x: 10, y: 15, width: self.view.frame.width, height: 25))
-            label1.text = "Vous êtes un restaurant ?"
-            label1.textAlignment = .center
-            label1.configure(type: .subtitle)
-            self.bottomView?.addSubview(label1)
+            self.downBtn = UIButton(frame: CGRect(x: 0, y: 5, width: self.view.frame.width, height: 20))
+            self.downBtn?.setImage(UIImage(systemName: "chevron.down"), for: .normal)
+            self.downBtn?.tintColor = UIColor(named: "gray")
+            self.downBtn?.backgroundColor = .white
+            self.downBtn?.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(self.hideButtons)))
+            self.bottomView?.addSubview(self.downBtn!)
             
-            let label2 = TextLabel(frame: CGRect(x: 10, y: 45, width: self.view.frame.width, height: 25))
-            label2.text = "Un magasin ?"
-            label2.textAlignment = .center
-            label2.configure(type: .subtitle)
-            self.bottomView?.addSubview(label2)
+            self.bottomViewTitle = TextLabel(frame: CGRect(x: 10, y: 25, width: self.view.frame.width, height: 25))
+            self.bottomViewTitle?.text = "Vous êtes un restaurant ?"
+            self.bottomViewTitle?.textAlignment = .center
+            self.bottomViewTitle?.configure(type: .subtitle)
+            self.bottomView?.addSubview(self.bottomViewTitle!)
+            
+            self.bottomViewTitle2 = TextLabel(frame: CGRect(x: 10, y: 55, width: self.view.frame.width, height: 25))
+            self.bottomViewTitle2?.text = "Un magasin ?"
+            self.bottomViewTitle2?.textAlignment = .center
+            self.bottomViewTitle2?.configure(type: .subtitle)
+            self.bottomView?.addSubview(self.bottomViewTitle2!)
             
             let signupBtn = MainButton(frame: CGRect(x: 30, y: 100, width: self.view.frame.width - 60, height: 44))
             signupBtn.setTitle("Inscription", for: .normal)
@@ -120,6 +132,28 @@ class ViewController: UIViewController {
             connectionBtn.addTarget(self, action: #selector(self.goToConnection), for: .touchUpInside)
             
             self.upBtn?.isHidden = true
+        }
+    }
+    
+    @objc func hideButtons() {
+        UIView.animate(withDuration: 0.3) {
+            self.bottomView?.frame = CGRect(x: 0, y: self.view.frame.height - 50, width: self.view.frame.width, height: self.bottomView!.frame.height)
+            self.downBtn?.isHidden = true
+            self.upBtn?.isHidden = false
+            
+            self.bottomViewTitle?.isHidden = true
+            self.bottomViewTitle2?.isHidden = true
+        }
+    }
+    
+    @objc func showButtons() {
+        UIView.animate(withDuration: 0.3) {
+            self.bottomView?.frame = CGRect(x: 0, y: self.view.frame.height - 240, width: self.view.frame.width, height: self.bottomView!.frame.height)
+            self.downBtn?.isHidden = false
+            self.upBtn?.isHidden = true
+            
+            self.bottomViewTitle?.isHidden = false
+            self.bottomViewTitle2?.isHidden = false
         }
     }
     
