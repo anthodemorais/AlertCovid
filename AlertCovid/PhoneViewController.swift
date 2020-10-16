@@ -114,21 +114,22 @@ class PhoneViewController: UIViewController {
         let otherLabel = UILabel(frame: CGRect(x: 0, y: registerBtn.frame.origin.y + registerBtn.frame.height + 20, width: self.view.frame.width, height: 15))
         otherLabel.font = UIFont(name: "Poppins-Regular", size: 13)
         let underlineAttribute = [NSAttributedString.Key.underlineStyle: NSUnderlineStyle.thick.rawValue]
-        let underlineAttributedString = NSAttributedString(string: "Je n'ai pas de numéro de téléphone", attributes: underlineAttribute)
+        let underlineAttributedString = NSAttributedString(string: "M'enregistrer autrement", attributes: underlineAttribute)
         otherLabel.attributedText = underlineAttributedString
+        otherLabel.isUserInteractionEnabled = true
         otherLabel.textAlignment = .center
         self.view.addSubview(otherLabel)
         
-        let emailLabel = UILabel(frame: CGRect(x: 0, y: otherLabel.frame.origin.y + otherLabel.frame.height + 5, width: self.view.frame.width, height: 15))
-        emailLabel.font = UIFont(name: "Poppins-Regular", size: 13)
-        let underlineString = NSAttributedString(string: "M'enregistrer autrement", attributes: underlineAttribute)
-        emailLabel.attributedText = underlineString
-        emailLabel.textColor = .red
-        emailLabel.textAlignment = .center
-        emailLabel.isUserInteractionEnabled = true
-        self.view.addSubview(emailLabel)
+//        let emailLabel = UILabel(frame: CGRect(x: 0, y: otherLabel.frame.origin.y + otherLabel.frame.height + 5, width: self.view.frame.width, height: 15))
+//        emailLabel.font = UIFont(name: "Poppins-Regular", size: 13)
+//        let underlineString = NSAttributedString(string: "M'enregistrer autrement", attributes: underlineAttribute)
+//        emailLabel.attributedText = underlineString
+//        emailLabel.textColor = .red
+//        emailLabel.textAlignment = .center
+//        emailLabel.isUserInteractionEnabled = true
+//        self.view.addSubview(emailLabel)
         
-        emailLabel.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(goToEmail)))
+        otherLabel.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(goToEmail)))
         
         let nurseImg = UIImageView(image: UIImage(named: "nurse"))
         nurseImg.frame = CGRect(x: -self.view.frame.width/4, y: self.view.frame.height - 300, width: self.view.frame.width, height: self.view.frame.width)
