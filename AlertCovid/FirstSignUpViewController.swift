@@ -56,6 +56,7 @@ class FirstSignUpViewController: UIViewController {
         
         self.addBackBtn()
         self.addBackgroundImage()
+        self.addHideKeyboard()
     }
     
     @objc func goToServices() {

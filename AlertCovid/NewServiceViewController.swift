@@ -42,6 +42,7 @@ class NewServiceViewController: UIViewController {
         self.view.addSubview(service)
         
         self.addBackBtn()
+        self.addHideKeyboard()
     }
     
     @objc func goToPhone(_ sender: UIView) {

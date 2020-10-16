@@ -53,6 +53,7 @@ class SecondSignUpViewController: UIViewController {
         
         self.addBackBtn()
         self.addBackgroundImage()
+        self.addHideKeyboard()
     }
     
     @objc func goToServices() {

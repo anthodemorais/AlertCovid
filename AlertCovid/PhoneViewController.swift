@@ -7,7 +7,7 @@
 
 import UIKit
 
-class PhoneViewController: UIViewController, UITextFieldDelegate {
+class PhoneViewController: UIViewController {
     
     var serviceName: String?
     var phone = ""
@@ -135,6 +135,7 @@ class PhoneViewController: UIViewController, UITextFieldDelegate {
         self.view.addSubview(nurseImg)
         
         self.addBack()
+        self.addHideKeyboard()
     }
     
     @objc func textFieldDidChanged() {

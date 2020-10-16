@@ -57,6 +57,7 @@ class ConnectionViewController: UIViewController {
         
         self.addBackBtn()
         self.addBackgroundImage()
+        self.addHideKeyboard()
     }
     
     @objc func goToServices() {
@@ -98,6 +99,23 @@ extension UIViewController {
         background.frame = self.view.frame
         self.view.addSubview(background)
         background.layer.zPosition = -1
+    }
+    
+}
+
+extension UIViewController: UITextFieldDelegate {
+    
+    public func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        self.view.endEditing(true)
+        return true
+    }
+    
+    func addHideKeyboard() {
+        self.view.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(hideKeyboard)))
+    }
+    
+    @objc func hideKeyboard() {
+        self.view.endEditing(true)
     }
     
 }

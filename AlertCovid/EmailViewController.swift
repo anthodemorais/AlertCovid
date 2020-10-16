@@ -75,6 +75,7 @@ class EmailViewController: UIViewController {
         self.view.addSubview(nurseImg)
         
         self.addBackBtn()
+        self.addHideKeyboard()
     }
     
     @objc func registerUser(_ sender: UIView) {
