@@ -14,7 +14,7 @@ class SecondSignUpViewController: UIViewController {
         
         self.view.backgroundColor = UIColor(named: "lightgray")
 
-        let image = UIImageView(frame: CGRect(x: (self.view.frame.width / 2) - 110 , y: 90, width: 220, height: 110))
+        let image = UIImageView(frame: CGRect(x: (self.view.frame.width / 2) - 110 , y: 90, width: 220, height: 90))
         image.image = UIImage(named: "Alert_Covid")
         self.view.addSubview(image)
                 
